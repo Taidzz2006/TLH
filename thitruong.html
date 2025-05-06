@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TLH Tech</title>
+  <link rel="stylesheet" href="thitruong.css">
+</head>
+<body>
+  <div class="search-bar">
+    <a href="trangchu.html" class="img">
+      <img src="logo.png" alt="Logo">
+    </a>
+    <input type="text" placeholder="Tìm kiếm...">
+    <button>Tìm 🔎</button>
+  </div>
+  <div class="sidebar">
+    <a href="trangchu.html">Trang chủ</a>
+    <a href="tincongnghe.html">Tin công nghệ</a>
+    <a href="tuvan.html">So Sánh</a>
+    <a href="danhgia.html">Đánh giá</a>
+    <a href="thitruong.html">Thị trường</a>
+  </div>
+  <div class="main-content">
+    <h1>▌Tin Nổi Bật</h1>
+    <div class="highlight-slider">
+      <div class="slide active">
+        <h2>🔥 <a href="oneplus13t.html">OnePlus 13T – Chiếc điện thoại đáng mua nhất 2025</a></h2>
+        <img src="13t2.jpg" alt="OnePlus 13T">
+      </div>
+      <div class="slide">
+        <h2>✨ <a href="nothing_phone.html">Nothing Phone (3a) – Thiết kế độc đáo, giá tốt</a></h2>
+        <img src="anh 5.jpg" alt="Nothing Phone 3a">
+      </div>
+      <div class="slide">
+        <h2>📱 Galaxy A36: Lựa chọn mới cho phân khúc tầm trung</h2>
+        <img src="a36.jpg" alt="Galaxy A36">
+      </div>
+      <div class="slider-controls">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+    <h1>▌Tin Mới Nhất</h1>
+    <div class="article">
+      <a href="oneplus13t.html"><img src="13t2.jpg" alt="Smartphone"></a>
+      <div class="content">
+        <h2>Oneplus 13T - Chiếc điện thoại tốt nhất hiện nay</h2>
+        <p class="description">OnePlus 13 5G - chiếc smartphone cao cấp mới ra mắt mang lại sự đột phá, đặc biệt là cụm camera độc đáo.</p>
+        <p class="meta">Ngày: 07/04/2025</p>
+      </div>
+    </div>
+    <div class="article">
+      <a href="nothing_phone.html"><img src="anh 5.jpg" alt="Smartphone"></a>
+      <div class="content">
+        <h2>Nothing Phone (3a) có gì mới?</h2>
+        <p class="description">Mẫu điện thoại tầm trung mới đến từ Nothing – lựa chọn hấp dẫn cho người dùng Android ngân sách thấp.</p>
+        <p class="meta">Ngày: 07/04/2025</p>
+      </div>
+    </div>
+    <div class="article">
+      <img src="a36.jpg" alt="Smartphone">
+      <div class="content">
+        <h2>Galaxy A36 có gì mới?</h2>
+        <p class="description">So với thế hệ trước, Galaxy A36 mang đến nâng cấp về hiệu năng và thiết kế, hứa hẹn gây chú ý phân khúc tầm trung.</p>
+        <p class="meta">Ngày: 07/04/2025</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="contact">
+    <div class="contact-info">
+      <h3>Thông Tin Liên Hệ</h3>
+      <a href="https://www.facebook.com/share/1HFvA8pn6L/" target="_blank">Huân Trần - Chuyên viên tư vấn</a>
+      <p>Điện thoại: 0336848120</p>
+      <p>Địa chỉ: 123 Công Nghệ, Hà Nội, Việt Nam</p>
+    </div>
+  </div>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 4000);
+    showSlide(currentSlide);
+  </script>
+
+</body>
+</html>

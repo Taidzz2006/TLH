@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 15%;
+    background-color: white;
+    padding: 10px;
+    float: left;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 70px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 20px;
+    text-decoration: black;
+    color: black;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.sidebar a:hover {
+    background-color: white;
+}
+
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.search-bar {
+    width: 99%;
+    padding: 10px;
+    background-color: #e85252;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Căn giữa bằng cách thêm khoảng cách từ bên trái */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar img {
+    height: 50px;
+    margin-left: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: white;
+    /* Màu nền trắng */
+    color: black;
+    /* Màu chữ đen để dễ đọc trên nền trắng */
+    border: 1px solid #ccc;
+    /* Thêm viền mỏng để nút rõ ràng hơn */
+    border-radius: 5px;
+    /* Bo góc nút */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #f0f0f0;
+    /* Màu khi rê chuột (hover) */
+    color: black;
+}
+
+.article {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.article img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: 0;
+    /* Kéo ảnh về bên trái */
+}
+
+.article h2 {
+    margin: 10px 0;
+    text-align: left;
+    margin: 0;
+    /* Đặt tiêu đề về bên trái */
+}
+
+.article p {
+    color: #555;
+    text-align: left;
+    /* Đặt nội dung về bên trái */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.contact {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0;
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLH Tech</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            color: #e85252;
+        }
+
+        .search-bar {
+            width: 98%;
+            padding: 12px 20px;
+            background-color: #e85252;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar img {
+            height: 50px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            background-color: white;
+            color: #e85252;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            width: 15%;
+            background-color: white;
+            padding: 10px;
+            float: left;
+            height: calc(100vh - 60px);
+            position: fixed;
+            top: 70px;
+            border-right: 1px solid #ccc;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 20px;
+            color: #333;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+        }
+
+        .sidebar a:hover {
+            background-color: #f2f2f2;
+            color: #e85252;
+        }
+
+        .main-content {
+            margin-left: 20%;
+            padding: 30px;
+            margin-top: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .highlight-slider {
+            position: relative;
+            background-color: #fff5f5;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
+            overflow: hidden;
+            height: 160px;
+        }
+
+        .slide {
+            display: none;
+            animation: fade 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-controls button {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            color: #e85252;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .article {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .article img {
+            width: 240px;
+            height: 160px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .article .content {
+            flex: 1;
+        }
+
+        .article h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #e85252;
+            border-radius: 5px;
+            color: #111;
+        }
+
+        .article .description {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .article .meta {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .container {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .contact-info {
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: #0066cc;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <a href="trangchu.html" class="img">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <input type="text" placeholder="Tìm kiếm...">
+        <button>Tìm🔎</button>
+    </div>
+
+    <div class="sidebar">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="tincongnghe.html">Tin công nghệ</a>
+        <a href="tuvan.html">So Sánh</a>
+        <a href="danhgia.html">Đánh giá</a>
+        <a href="thitruong.html">Thị trường</a>
+    </div>
+
+    <div class="main-content">
+        <div class="highlight-slider">
+            <div class="slide active">
+                <h2>🔥 OnePlus 13T – Chiếc điện thoại đáng mua nhất 2025</h2>
+                <p><a href="oneplus13t.html"></a></p>
+            </div>
+            <div class="slide">
+                <h2>✨ Nothing Phone (3a) – Thiết kế độc đáo, giá tốt</h2>
+                <p><a href="nothing_phone.html"></a></p>
+            </div>
+            <div class="slide">
+                <h2>📱 Galaxy A36: Lựa chọn mới cho phân khúc tầm trung</h2>
+                <p><a href="#"></a></p>
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">❮</button>
+                <button onclick="nextSlide()">❯</button>
+            </div>
+        </div>
+        <h1>▌Tin Mới Nhất</h1>
+        <div class="article">
+            <a href="oneplus13t.html"><img src="13t2.jpg" alt="Smartphone"></a>
+            <div class="content">
+                <h2>Oneplus 13T - Chiếc điện thoại tốt nhất hiện nay</h2>
+                <p class="description">OnePlus 13 5G - chiếc smartphone cao cấp mới ra mắt mang lại sự đột phá, đặc biệt là cụm camera độc đáo.</p>
+                <p class="meta">Ngày: 07/04/2025</p>
+            </div>
+        </div>
+        <div class="article">
+            <a href="nothing_phone.html"><img src="anh 5.jpg" alt="Smartphone"></a>
+            <div class="content">
+                <h2>Nothing Phone (3a) có gì mới?</h2>
+                <p class="description">Mẫu điện thoại tầm trung mới đến từ Nothing – lựa chọn hấp dẫn cho người dùng Android ngân sách thấp.</p>
+                <p class="meta">Ngày: 07/04/2025</p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="anh 10.jpg" alt="Smartphone">
+            <div class="content">
+                <h2>Galaxy A36 có gì mới?</h2>
+                <p class="description">So với thế hệ trước, Galaxy A36 mang đến nâng cấp về hiệu năng và thiết kế, hứa hẹn gây chú ý phân khúc tầm trung.</p>
+                <p class="meta">Ngày: 07/04/2025</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <div class="contact-info">
+            <h3>Thông Tin Liên Hệ</h3>
+            <a href="https://www.facebook.com/share/1HFvA8pn6L/" target="_blank">Huân Trần chuyên viên tư vấn</a>
+            <p>Điện thoại: 0336848120</p>
+            <p>Địa chỉ: 123 Công Nghệ, Hà Nội, Việt Nam</p>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+        setInterval(nextSlide, 4000); 
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

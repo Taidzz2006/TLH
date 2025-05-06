@@ -1,0 +1,42 @@
+.highlight-slider {
+    position: relative;
+    background-color: #fff5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    overflow: hidden;
+    height: 160px;
+}
+
+.slide {
+    display: none;
+    animation: fade 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #e85252;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
